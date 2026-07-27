@@ -1,9 +1,825 @@
-<!DOCTYPE HTML>
-<html>
-  <head><title>Contoh</title></head>
-  <body>
-    <h2 style="color: red;">
-      Teknik Informatika
-    </h2>
-  </body>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Handayani Makassar</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR HEADER -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Logo Universitas Handayani Makassar">
+            <div class="logo-text">
+                <span class="univ-name">UNIVERSITAS<br>HANDAYANI</span>
+                <span class="univ-city">MAKASSAR</span>
+            </div>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#" class="nav-btn active" data-target="home"><i class="fa-solid fa-house"></i> Beranda</a></li>
+            <li><a href="#" class="nav-btn" data-target="about"><i class="fa-solid fa-user"></i> Tentang</a></li>
+            <li><a href="#" class="nav-btn" data-target="prodi"><i class="fa-solid fa-graduation-cap"></i> Program Studi</a></li>
+            <li><a href="#" class="nav-btn" data-target="news"><i class="fa-solid fa-newspaper"></i> Berita</a></li>
+            <li><a href="#" class="nav-btn" data-target="galeri"><i class="fa-solid fa-images"></i> Galeri</a></li>
+            <li><a href="#" class="nav-btn" data-target="kontak"><i class="fa-solid fa-envelope"></i> Kontak</a></li>
+        </ul>
+
+        <button class="btn-pendaftaran nav-btn" data-target="pendaftaran">
+            <i class="fa-solid fa-user-plus"></i> Pendaftaran
+        </button>
+    </nav>
+
+    <!-- SECTION HOME / BERANDA -->
+    <main id="home" class="page-section active">
+        <!-- HERO BANNER -->
+        <section class="hero-section">
+            <div class="hero-container">
+                <div class="hero-text">
+                    <span class="sub-welcome">SELAMAT DATANG DI</span>
+                    <h1>UNIVERSITAS<br><span class="highlight-yellow">HANDAYANI</span><br>MAKASSAR</h1>
+                    <p>Mewujudkan generasi unggul, berkarakter, dan berdaya saing di bidang teknologi dan inovasi untuk masa depan yang lebih baik.</p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn-yellow nav-btn" data-target="about">Jelajahi Kampus &rarr;</button>
+                        <button class="btn-outline" onclick="window.open('https://www.youtube.com/@universitashandayanimakassar')"><i class="fa-solid fa-play"></i>YouTube</button>
+                    </div>
+
+                    <div class="slider-indicators">
+                        <span class="indicator active">01</span>
+                        <div class="line active"></div>
+                        <span class="indicator">02</span>
+                        <div class="line"></div>
+                        <span class="indicator">03</span>
+                    </div>
+                </div>
+
+                <div class="hero-image-wrapper">
+                    <img src="images/banner.jpeg" alt="Gedung Universitas Handayani Makassar" class="hero-img">
+                </div>
+            </div>
+
+            <!-- FLOATING INFO BAR (4 CARD BIRU NAVY) -->
+            <div class="info-bar-container">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="info-content">
+                        <h3>PROGRAM STUDI</h3>
+                        <p>Berbagai pilihan program studi unggulan untuk masa depan yang lebih baik.</p>
+                        <a href="#" class="card-link nav-btn" data-target="prodi">Lihat Selengkapnya &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon yellow"><i class="fa-solid fa-newspaper"></i></div>
+                    <div class="info-content">
+                        <h3>BERITA KAMPUS</h3>
+                        <p>Informasi terbaru seputar kegiatan, prestasi, dan pengumuman kampus.</p>
+                        <a href="#" class="card-link nav-btn" data-target="news">Lihat Selengkapnya &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-images"></i></div>
+                    <div class="info-content">
+                        <h3>GALERI</h3>
+                        <p>Dokumentasi berbagai kegiatan dan momen berharga di kampus kita.</p>
+                        <a href="#" class="card-link nav-btn" data-target="galeri">Lihat Selengkapnya &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon yellow"><i class="fa-solid fa-pen-to-square"></i></div>
+                    <div class="info-content">
+                        <h3>PENDAFTARAN</h3>
+                        <p>Bergabunglah bersama kami dan wujudkan masa depan terbaik Anda.</p>
+                        <a href="#" class="card-link yellow nav-btn" data-target="pendaftaran">Daftar Sekarang &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATISTIK & PRODI UNGGULAN -->
+        <section class="home-middle-section">
+            <div class="why-us-box">
+                <span class="section-tag-small">MENGAPA MEMILIH KAMI</span>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                        <h3>1000+</h3>
+                        <p>Mahasiswa Aktif</p>
+                    </div>
+                    <div class="stat-item yellow">
+                        <div class="stat-icon"><i class="fa-solid fa-user-tie"></i></div>
+                        <h3>120+</h3>
+                        <p>Dosen Profesional</p>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>10+</h3>
+                        <p>Program Studi</p>
+                    </div>
+                    <div class="stat-item yellow">
+                        <div class="stat-icon"><i class="fa-solid fa-landmark"></i></div>
+                        <h3>25+</h3>
+                        <p>Tahun Pengalaman</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="prodi-featured-box">
+                <div class="section-header-flex">
+                    <h3>PROGRAM STUDI UNGGULAN</h3>
+                    <a href="#" class="see-all-link nav-btn" data-target="prodi">Lihat Semua &rarr;</a>
+                </div>
+
+                <div class="prodi-cards-grid">
+                    <div class="prodi-mini-card">
+                        <i class="fa-solid fa-code"></i>
+                        <h4>Teknik Informatika</h4>
+                        <a href="#" class="detail-link nav-btn" data-target="prodi">Detail &rarr;</a>
+                    </div>
+                    <div class="prodi-mini-card">
+                        <i class="fa-solid fa-desktop"></i>
+                        <h4>Sistem Informasi</h4>
+                        <a href="#" class="detail-link nav-btn" data-target="prodi">Detail &rarr;</a>
+                    </div>
+                    <div class="prodi-mini-card">
+                        <i class="fa-solid fa-brain"></i>
+                        <h4>Sistem Komputer</h4>
+                        <a href="#" class="detail-link nav-btn" data-target="prodi">Detail &rarr;</a>
+                    </div>
+                    <div class="prodi-mini-card">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <h4>Kewirausahaan</h4>
+                        <a href="#" class="detail-link nav-btn" data-target="prodi">Detail &rarr;</a>
+                    </div>
+                    <div class="prodi-mini-card">
+                        <i class="fa-solid fa-calculator"></i>
+                        <h4>Hukum</h4>
+                        <a href="#" class="detail-link nav-btn" data-target="prodi">Detail &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>  
+    </main>
+
+<!-- SECTION 2: TENTANG / ABOUT -->
+    <section id="about" class="page-section">
+        <div class="about-container">
+            
+            <!-- HEADER HALAMAN -->
+            <div class="page-header text-center">
+                <span class="sub-welcome">PROFIL KAMPUS</span>
+                <h2>SEJARAH & PROFIL <span class="highlight-yellow">UNIVERSITAS HANDAYANI MAKASSAR</span></h2>
+                <p class="header-desc">A Technopreneurship Campus yang mencetak SDM unggul di bidang Teknologi Informasi, Hukum, dan Sosial di Indonesia Timur.</p>
+            </div>
+
+            <!-- PROFIL & FOTO -->
+            <div class="about-grid-main">
+                <div class="about-image-card">
+                    <img src="images/banner.jpeg" alt="Gedung Kampus Universitas Handayani Makassar">
+                    <div class="experience-badge">
+                        <span class="exp-number">1996</span>
+                        <span class="exp-text">Tahun Didirikan</span>
+                    </div>
+                </div>
+
+                <div class="about-text-content">
+                    <h3>Sekilas Sejarah Kampus</h3>
+                    <p>Universitas Handayani Makassar (UHM) didirikan pada tanggal <strong>21 Juni 1996</strong> di bawah naungan Yayasan Doktor Haji Alifuddin (Yayasan Ali). Awalnya dikenal sebagai Sekolah Tinggi Manajemen Informatika dan Komputer (STMIK) Handayani, sebelum akhirnya bertransformasi menjadi Universitas Handayani Makassar.</p>
+                    <p>UHM merupakan salah satu perguruan tinggi pelopor pendidikan komputer di Kawasan Timur Indonesia dan sejak tahun 2013 telah menyelenggarakan program Pascasarjana Magister Komputer (S2 Sistem Komputer) pertama di wilayah Kopertis IX Sulawesi.</p>
+                    
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Fakultas Ilmu Komputer (FIKOM)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Fakultas Hukum & Ilmu Sosial (FHIS)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Program Pascasarjana (S2)</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Gelar & Kurikulum Technopreneurship</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VISI & MISI RESMI WEB HANDAYANI.AC.ID -->
+            <div class="visi-misi-section">
+                <div class="visi-card">
+                    <div class="card-icon-header">
+                        <i class="fa-solid fa-eye"></i>
+                        <h3>VISI UNIVERSITAS</h3>
+                    </div>
+                    <p class="visi-text">"Menjadi Universitas unggul menghasilkan Sumberdaya Manusia Technopreneurship."</p>
+                    <p class="visi-sub">Universitas Handayani Makassar berkomitmen melahirkan lulusan yang menguasai kompetensi dibidang Informatika, Administrasi Publik, Hukum, serta berjiwa entrepreneurship berbasis teknologi.</p>
+                </div>
+
+                <div class="misi-card">
+                    <div class="card-icon-header">
+                        <i class="fa-solid fa-bullseye"></i>
+                        <h3>MISI UNIVERSITAS</h3>
+                    </div>
+                    <ul>
+                        <li><i class="fa-solid fa-arrow-right-long"></i> Menyelenggarakan Pendidikan Tinggi melalui sistem pendidikan dan pengajaran yang bermutu bercirikan Technopreneurship.</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i> Melaksanakan penelitian dalam bidang Technopreneurship yang dapat menciptakan lapangan kerja baru.</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i> Mengembangkan kegiatan pengabdian kepada masyarakat melalui penerapan ilmu pengetahuan dan teknologi.</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i> Meningkatkan kualitas kerjasama untuk kemandirian penyelenggaraan pendidikan tinggi.</li>
+                        <li><i class="fa-solid fa-arrow-right-long"></i> Menyelenggarakan tata pamong dan tata kelola Universitas yang sehat (Good University Governance), kredibel, transparan, dan akuntabel.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MOTTO, PRINSIP & FILOSOFI -->
+            <div class="motto-box-grid">
+                <div class="motto-item">
+                    <i class="fa-solid fa-heart"></i>
+                    <h4>MOTTO</h4>
+                    <p>"Kerja yang dilandasi keikhlasan bernilai ibadah."</p>
+                </div>
+                <div class="motto-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4>PRINSIP</h4>
+                    <p>"Berani menghadapi ketidakpastian."</p>
+                </div>
+                <div class="motto-item">
+                    <i class="fa-solid fa-star"></i>
+                    <h4>FILOSOFI</h4>
+                    <p>"Memberikan layanan yang terbaik, berkualitas, dan profesional."</p>
+                </div>
+            </div>
+
+            <!-- KONTAK DAN LOKASI RESMI -->
+            <div class="rector-welcome-box" style="margin-top: 50px;">
+                <div class="rector-img-wrapper">
+                    <i class="fa-solid fa-location-dot" style="font-size: 60px; color: var(--accent-yellow);"></i>
+                </div>
+                <div class="rector-quote">
+                    <h3 style="color: var(--text-white); margin-bottom: 10px;">Kampus Universitas Handayani Makassar</h3>
+                    <p class="quote-text" style="font-style: normal;">
+                        <strong>Alamat:</strong> Jl. Adhyaksa Baru No. 1, Kel. Pandang, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan.<br>
+                        <strong>Telepon:</strong> (0411) 4673395<br>
+                        <strong>Email:</strong> info@handayani.ac.id | <strong>Website:</strong> handayani.ac.id
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="prodi" class="page-section">
+    <!-- Header Halaman -->
+    <div class="page-header">
+        <span class="sub-welcome">PROGRAM AKADEMIK</span>
+        <h2>PROGRAM STUDI <span class="highlight-yellow">UNIVERSITAS HANDAYANI</span></h2>
+        <p class="header-desc">Pilihan program studi berorientasi Technopreneurship, Cyber Law, dan Edutech untuk mencetak lulusan unggul yang siap bersaing di era digital.</p>
+    </div>
+
+    <!-- Tab Navigasi Fakultas -->
+    <div class="prodi-tabs-nav">
+        <button class="prodi-tab-btn active" onclick="switchProdiTab(event, 'fikom')">
+            <i class="fa-solid fa-laptop-code"></i> Fakultas Ilmu Komputer
+        </button>
+        <button class="prodi-tab-btn" onclick="switchProdiTab(event, 'fhis')">
+            <i class="fa-solid fa-scale-balanced"></i> Fakultas Hukum & Ilmu Sosial
+        </button>
+        <button class="prodi-tab-btn" onclick="switchProdiTab(event, 'pasca')">
+            <i class="fa-solid fa-graduation-cap"></i> Pascasarjana
+        </button>
+    </div>
+
+    <!-- KONTEN TAB 1: FAKULTAS ILMU KOMPUTER -->
+    <div id="fikom" class="prodi-tab-content active">
+        <div class="prodi-grid">
+            
+            <!-- S1 Teknik Informatika -->
+            <div class="prodi-card">
+                <div class="prodi-card-header">
+                    <span class="badge-jenjang">S1</span>
+                    <span class="badge-akred bg-gold">Unggulan 2027</span>
+                </div>
+                <h3>S1 Teknik Informatika</h3>
+                <p class="prodi-summary">Fokus pada rekayasa perangkat lunak, multimedia, dan pengembangan produk digital berbasis technopreneurship.</p>
+                <div class="prodi-quick-info">
+                    <span><i class="fa-solid fa-award"></i> Gelar: S.Kom.</span>
+                    <span><i class="fa-solid fa-layer-group"></i> RPL &amp; Multimedia</span>
+                </div>
+                <button class="btn-detail-prodi" onclick="openProdiModal('ti')">Lihat Visi, Misi &amp; Detail <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- S1 Sistem Komputer -->
+            <div class="prodi-card">
+                <div class="prodi-card-header">
+                    <span class="badge-jenjang">S1</span>
+                    <span class="badge-akred">Akreditasi B</span>
+                </div>
+                <h3>S1 Sistem Komputer</h3>
+                <p class="prodi-summary">Unggul dalam sistem cerdas, robotika, Internet of Things (IoT), sistem tertanam, dan keamanan jaringan.</p>
+                <div class="prodi-quick-info">
+                    <span><i class="fa-solid fa-award"></i> Gelar: S.Kom.</span>
+                    <span><i class="fa-solid fa-clock"></i> Kelas Reguler &amp; Malam</span>
+                </div>
+                <button class="btn-detail-prodi" onclick="openProdiModal('sk')">Lihat Visi, Misi &amp; Detail <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- S1 Sistem Informasi -->
+            <div class="prodi-card">
+                <div class="prodi-card-header">
+                    <span class="badge-jenjang">S1</span>
+                    <span class="badge-akred">Akreditasi B</span>
+                </div>
+                <h3>S1 Sistem Informasi</h3>
+                <p class="prodi-summary">Berfokus pada tata kelola ICT, sistem informasi manajemen, dan ekonomi kreatif berbasis kewirausahaan digital.</p>
+                <div class="prodi-quick-info">
+                    <span><i class="fa-solid fa-award"></i> Gelar: S.Kom.</span>
+                    <span><i class="fa-solid fa-chart-line"></i> Ekonomi Kreatif &amp; ICT</span>
+                </div>
+                <button class="btn-detail-prodi" onclick="openProdiModal('si')">Lihat Visi, Misi &amp; Detail <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- KONTEN TAB 2: FAKULTAS HUKUM & ILMU SOSIAL -->
+    <div id="fhis" class="prodi-tab-content">
+        <div class="prodi-grid">
+            
+            <!-- S1 Hukum -->
+            <div class="prodi-card">
+                <div class="prodi-card-header">
+                    <span class="badge-jenjang">S1</span>
+                    <span class="badge-akred">Terakreditasi</span>
+                </div>
+                <h3>S1 Hukum</h3>
+                <p class="prodi-summary">Program studi hukum berwawasan technopreneurship dengan keunggulan spesialisasi di bidang Cyber Law.</p>
+                <div class="prodi-quick-info">
+                    <span><i class="fa-solid fa-award"></i> Gelar: S.H.</span>
+                    <span><i class="fa-solid fa-gavel"></i> Spesialisasi Cyber Law</span>
+                </div>
+                <button class="btn-detail-prodi" onclick="openProdiModal('hukum')">Lihat Visi, Misi &amp; Detail <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- S1 Administrasi Publik -->
+            <div class="prodi-card">
+                <div class="prodi-card-header">
+                    <span class="badge-jenjang">S1</span>
+                    <span class="badge-akred">Terakreditasi</span>
+                </div>
+                <h3>S1 Administrasi Publik</h3>
+                <p class="prodi-summary">Mencetak birokrat modern dan analis kebijakan publik berbasis tata kelola digital (E-Government).</p>
+                <div class="prodi-quick-info">
+                    <span><i class="fa-solid fa-award"></i> Gelar: S.MAP.</span>
+                    <span><i class="fa-solid fa-building-columns"></i> Berbasis E-Government</span>
+                </div>
+                <button class="btn-detail-prodi" onclick="openProdiModal('ap')">Lihat Visi, Misi &amp; Detail <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- S1 Kewirausahaan -->
+            <div class="prodi-card">
+                <div class="prodi-card-header">
+                    <span class="badge-jenjang">S1</span>
+                    <span class="badge-akred">Terakreditasi</span>
+                </div>
+                <h3>S1 Kewirausahaan</h3>
+                <p class="prodi-summary">Program inovatif untuk mencetak wirausahawan muda, bisnis startup digital, dan pemberdayaan UMKM lokal.</p>
+                <div class="prodi-quick-info">
+                    <span><i class="fa-solid fa-award"></i> Gelar: S.Bns.</span>
+                    <span><i class="fa-solid fa-rocket"></i> Startup &amp; Ekonomi Kreatif</span>
+                </div>
+                <button class="btn-detail-prodi" onclick="openProdiModal('kwu')">Lihat Visi, Misi &amp; Detail <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+            <!-- S1 Pendidikan Teknologi Informasi -->
+            <div class="prodi-card">
+                <div class="prodi-card-header">
+                    <span class="badge-jenjang">S1</span>
+                    <span class="badge-akred">Terakreditasi</span>
+                </div>
+                <h3>S1 Pendidikan Teknologi Informasi</h3>
+                <p class="prodi-summary">Mencetak pendidik IT profesional &amp; pengembang arsitektur teknologi pendidikan (Edutech) inklusif.</p>
+                <div class="prodi-quick-info">
+                    <span><i class="fa-solid fa-award"></i> Gelar: S.Pd.</span>
+                    <span><i class="fa-solid fa-graduation-cap"></i> Edutech &amp; Inklusi Sosial</span>
+                </div>
+                <button class="btn-detail-prodi" onclick="openProdiModal('pti')">Lihat Visi, Misi &amp; Detail <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- KONTEN TAB 3: PASCASARJANA -->
+    <div id="pasca" class="prodi-tab-content">
+        <div class="prodi-grid">
+            
+            <!-- S2 Sistem Komputer -->
+            <div class="prodi-card featured-pasca">
+                <div class="prodi-card-header">
+                    <span class="badge-jenjang s2">S2</span>
+                    <span class="badge-akred bg-gold">Baik (LAM INFOKOM)</span>
+                </div>
+                <h3>S2 Sistem Komputer</h3>
+                <p class="prodi-summary">Program Magister Komputer berbasis entrepreneurship &amp; riset terapan. Telah meluluskan lebih dari 400 alumni M.Kom.</p>
+                <div class="prodi-quick-info">
+                    <span><i class="fa-solid fa-award"></i> Gelar: M.Kom.</span>
+                    <span><i class="fa-solid fa-user-tie"></i> Pengajar Doktoral Luar Negeri</span>
+                </div>
+                <button class="btn-detail-prodi" onclick="openProdiModal('s2sk')">Lihat Visi, Misi &amp; Detail <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL POPUP DETAIL PRODI -->
+    <div id="prodiModal" class="prodi-modal-overlay">
+        <div class="prodi-modal-content">
+            <span class="prodi-modal-close" onclick="closeProdiModal()">&times;</span>
+            <div id="prodiModalBody">
+                <!-- Konten modal akan diisi secara dinamis oleh JavaScript -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="news" class="page-section">
+    <!-- Header Section -->
+    <div class="page-header">
+        <span class="sub-welcome">INFORMASI TERKINI</span>
+        <h2>BERITA &amp; <span class="highlight-yellow">KEGIATAN KAMPUS</span></h2>
+        <p class="header-desc">Dapatkan kabar terbaru seputar akademis, prestasi mahasiswa, seminar, dan agenda penting Universitas Handayani Makassar.</p>
+    </div>
+
+    <!-- Grid Kartu Berita -->
+    <div class="news-grid-cards">
+        
+        <!-- Berita 1 -->
+        <div class="news-card-dark">
+            <div class="news-img-wrapper">
+                <img src="images/Berita1.png" alt="Penerimaan Mahasiswa Baru">
+            </div>
+            <div class="news-card-body">
+                <span class="news-date"><i class="fa-regular fa-calendar-days"></i> 1 Juli 2026</span>
+                <h4>Dosen Universitas Handayani Makassar Berkontribusi dalam PKM Nasional ADPERTISI, Dorong Digitalisasi Pertanian dan Penguatan Koperasi Desa</h4>
+                <p>Maros – Dosen Universitas Handayani Makassar kembali menunjukkan komitmennya dalam mengimplementasikan Tri Dharma Perguruan Tinggi melalui partisipasi pada Pengabdian kepada Masyarakat (PKM) Nasional ADPERTISI Tahun 2026 yang dilaksanakan di Desa Marannu, Kabupaten Maros. Kegiatan ini menjadi wadah kolaborasi dosen dari ...</p>
+                <a href="javascript:void(0)" class="view-news-btn" onclick="openNewsModal('news1')">
+                    Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Berita 2 -->
+        <div class="news-card-dark">
+            <div class="news-img-wrapper">
+                <img src="images/Screenshot 2026-07-20 120347.png" alt="Workshop Technopreneurship">
+                
+            </div>
+            <div class="news-card-body">
+                <span class="news-date"><i class="fa-regular fa-calendar-days"></i> 28 Juni 2026</span>
+                <h4>Perluas Akses Pendidikan Tinggi, Universitas Handayani Makassar Luncurkan Program Beasiswa Kerja Sama Tahun Akademik 2026/2027</h4>
+                <p>Makassar – Dalam upaya memperluas akses masyarakat terhadap pendidikan tinggi yang berkualitas, Universitas Handayani Makassar bersama Yayasan Doktor Haji Alifuddin kembali menghadirkan Program Beasiswa Kerja Sama Tahun Akademik 2026/2027. Program ini memberikan kesempatan kepada calon mahasiswa baru untuk memperoleh keringanan ...</p>
+                <a href="javascript:void(0)" class="view-news-btn" onclick="openNewsModal('news2')">
+                    Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Berita 3 -->
+        <div class="news-card-dark">
+            <div class="news-img-wrapper">
+                <img src="images/WhatsApp-Image-2026-06-13-at-10.26.59-768x432.jpeg" alt="">
+            </div>
+            <div class="news-card-body">
+                <span class="news-date"><i class="fa-regular fa-calendar-days"></i> 15 Mei 2026</span>
+                <h4>Universitas Handayani Makassar dan KUA Mandai Gelar Capacity Building Literasi Keuangan dan Ketahanan Keluarga di Era Digital 4.0</h4>
+                <p>Maros, 11 Juni 2026 – Dalam upaya meningkatkan kapasitas masyarakat dalam menghadapi berbagai tantangan kehidupan keluarga di era digital, Universitas Handayani Makassar bekerja sama dengan Kantor Urusan Agama (KUA) Kecamatan Mandai menyelenggarakan kegiatan Pengabdian kepada Masyarakat (PKM) bertajuk “Capacity Building ...</p>
+                <a href="javascript:void(0)" class="view-news-btn" onclick="openNewsModal('news3')">
+                    Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Berita 4 -->
+        <div class="news-card-dark">
+            <div class="news-img-wrapper">
+                <img src="images/foto_berita4.png" alt="">
+            </div>
+            <div class="news-card-body">
+                <span class="news-date"><i class="fa-regular fa-calendar-days"></i> 02 April 2026</span>
+                <h4>Perkuat Sinergi Akademik dan Inovasi, Universitas Handayani Makassar Tandatangani MoU Bersama Institut Teknologi dan Bisnis Kalla</h4>
+                <p>Makassar 26 Mei 2026 – Universitas Handayani Makassar (UHM) kembali memperluas jejaring kemitraan strategis melalui penandatanganan Memorandum of Understanding (MoU) bersama Institut Teknologi dan Bisnis (ITB) Kalla yang dilaksanakan pada Senin, 25 Mei 2026. Kerja sama tersebut menjadi bagian dari...</p>
+                <a href="javascript:void(0)" class="view-news-btn" onclick="openNewsModal('news4')">
+                    Baca Selengkapnya <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MODAL POPUP DETAIL BERITA -->
+    <div id="newsDetailModal" class="news-detail-modal">
+        <div class="news-modal-body">
+            <span class="news-modal-close" onclick="closeNewsModal()">&times;</span>
+            <div id="modalNewsContent">
+                <!-- Konten berita dinamis akan dirender dari JS -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SECTION GALERI -->
+<section id="galeri" class="page-section">
+    <div class="page-header text-center">
+        <span class="sub-welcome">DOKUMENTASI KAMPUS</span>
+        <h2>GALERI <span class="highlight-yellow">FOTO KAMPUS</span></h2>
+        <p class="header-desc">Dokumentasi kegiatan, fasilitas, dan momen di Universitas Handayani Makassar.</p>
+    </div>
+
+    <!-- Grid Foto (Semua gambar dimasukkan di sini tanpa kategori) -->
+    <div class="gallery-grid">
+        <div class="gallery-item" onclick="openGalleryModal('images/foto_kampus3.jpeg')">
+            <img src="images/foto_kampus3.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/kampus.jpeg')">
+            <img src="images/kampus.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/kelas.jpeg')">
+            <img src="images/kelas.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/kelas2.jpeg')">
+            <img src="images/kelas2.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/perpustakaan.jpeg')">
+            <img src="images/perpustakaan.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/banner.jpeg')">
+            <img src="images/banner.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/pintu.jpeg')">
+            <img src="images/pintu.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/lab.jpeg')">
+            <img src="images/lab.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/lab2.jpeg')">
+            <img src="images/lab2.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/lab3.jpeg')">
+            <img src="images/lab3.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/lab4.jpeg')">
+            <img src="images/lab4.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/kelas3.jpeg')">
+            <img src="images/kelas3.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('1.jpeg')">
+            <img src="images/1.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/2.jpeg')">
+            <img src="images/2.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/3.jpeg')">
+            <img src="images/3.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+        <div class="gallery-item" onclick="openGalleryModal('images/4.jpeg')">
+            <img src="images/4.jpeg" alt="Foto Kampus">
+            <div class="gallery-overlay">
+                <i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- MODAL POPUP PREVIEW GAMBAR -->
+<div id="galleryModal" class="prodi-modal-overlay">
+    <div class="prodi-modal-content gallery-modal-content">
+        <span class="prodi-modal-close" onclick="closeGalleryModal()">&times;</span>
+        <img id="galleryModalImg" src="" alt="Preview Foto" class="modal-preview-img">
+    </div>
+</div>
+
+<!-- MODAL POPUP LIGHTBOX GALERI -->
+<div id="galleryModal" class="prodi-modal-overlay">
+    <div class="prodi-modal-content gallery-modal-content">
+        <span class="prodi-modal-close" onclick="closeGalleryModal()">&times;</span>
+        <img id="galleryModalImg" src="" alt="Preview Foto" class="modal-preview-img">
+        <h3 id="galleryModalTitle" style="margin-top: 15px;"></h3>
+        <p id="galleryModalDesc" style="color: var(--text-gray); font-size: 14px; margin-top: 5px;"></p>
+    </div>
+</div>
+
+<!-- SECTION KONTAK -->
+<section id="kontak" class="page-section">
+    <div class="page-header text-center">
+        <span class="sub-welcome">HUBUNGI KAMI</span>
+        <h2>HUBUNGI <span class="highlight-yellow">UNIVERSITAS HANDAYANI</span></h2>
+        <p class="header-desc">Tim kami siap memberikan informasi lengkap terkait akademik, pendaftaran, dan layanan kampus.</p>
+    </div>
+
+    <div class="contact-wrapper">
+        <!-- KOLOM KIRI: Informasi & Peta -->
+        <div class="contact-card-box">
+            <div class="contact-item">
+                <div class="contact-icon-bg"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="contact-text">
+                    <h4>Alamat Kampus</h4>
+                    <p>Jl. Adhyaksa Baru No. 1, Kel. Pandang, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon-bg"><i class="fa-solid fa-phone"></i></div>
+                <div class="contact-text">
+                    <h4>Telepon / WhatsApp</h4>
+                    <p>(0411) 4673395 / +62 822-9935-2625</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon-bg"><i class="fa-solid fa-envelope"></i></div>
+                <div class="contact-text">
+                    <h4>Email Resmi</h4>
+                    <p>info@handayani.ac.id</p>
+                </div>
+            </div>
+
+            <!-- Tombol Cepat -->
+            <div class="contact-quick-buttons">
+                <a href="https://wa.me/6282299352625" target="_blank" class="btn-wa">
+                    <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+                </a>
+                <a href="https://maps.google.com/?q=Universitas+Handayani+Makassar" target="_blank" class="btn-maps">
+                    <i class="fa-solid fa-map-location-dot"></i> Buka Google Maps
+                </a>
+            </div>
+
+            <!-- Peta -->
+            <div class="contact-map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3973.7437815777477!2d119.444738!3d-5.144983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbf153a5c1efedb%3A0xb35a7df49ef07d72!2sUniversitas%20Handayani%20Makassar!5e0!3m2!1sid!2sid!4v1700000000000" 
+                    width="100%" 
+                    height="200" 
+                    style="border:0; border-radius:8px;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- KOLOM KANAN: Form Pesan -->
+        <div class="contact-form-side">
+            <h3>Kirim Pesan Anda</h3>
+            <p class="form-subtext">Isi formulir di bawah ini untuk pertanyaan atau informasi lebih lanjut.</p>
+
+            <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+                <div class="form-group-single">
+                    <label for="contactName">Nama Lengkap</label>
+                    <input type="text" id="contactName" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+
+                <div class="form-group-single">
+                    <label for="contactEmail">Email</label>
+                    <input type="email" id="contactEmail" placeholder="contoh@email.com" required>
+                </div>
+
+                <div class="form-group-single">
+                    <label for="contactSubject">Subjek</label>
+                    <input type="text" id="contactSubject" placeholder="Subjek atau topik pertanyaan" required>
+                </div>
+
+                <div class="form-group-single">
+                    <label for="contactMessage">Pesan Anda</label>
+                    <textarea id="contactMessage" rows="4" placeholder="Tuliskan pesan Anda secara detail..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-yellow btn-submit-contact">
+                    Kirim Pesan <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- SECTION PENDAFTARAN (mySIAKAD PMB STYLE) -->
+<section id="pendaftaran" class="page-section">
+    <div class="page-header text-center">
+        <span class="sub-welcome">PORTAL mySIAKAD PMB</span>
+        <h2>PENERIMAAN MAHASISWA BARU</h2>
+        <p class="header-desc">File utama form Penerimaan Mahasiswa Baru Universitas Handayani Makassar</p>
+    </div>
+
+    <div class="pmb-container">
+        <!-- Banner Info PMB -->
+        <div class="pmb-banner-card">
+            <img src="images/sampul_kontak.jpeg" alt="Info Penerimaan Mahasiswa Baru" class="pmb-banner-img">
+        </div>
+
+        <!-- Tombol Aksi Utama (Tiga Tombol Warna-warni) -->
+        <div class="pmb-action-buttons">
+            <button type="button" class="btn-pmb btn-red" onclick="openFormModal()">
+                <i class="fa-solid fa-pen-to-square"></i> Isi Formulir
+            </button>
+            <button type="button" class="btn-pmb btn-cyan" onclick="openLoginModal()">
+                <i class="fa-solid fa-right-to-bracket"></i> Login
+            </button>
+            <button type="button" class="btn-pmb btn-orange" onclick="openReRegModal()">
+                <i class="fa-solid fa-id-card"></i> Pendaftaran Ulang
+            </button>
+        </div>
+
+        <!-- Floating WhatsApp Widget di Pojok Kanan -->
+        <a href="https://wa.me/6285189270263" target="_blank" class="pmb-wa-float" title="Customer Service PMB">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+</section>
+
+
+
+    <!-- POPUP MODAL BERITA -->
+    <div id="newsModal" class="news-detail-modal">
+        <div class="news-modal-body">
+            <span class="news-modal-close">&times;</span>
+            <span id="modalNewsDate" class="news-date"></span>
+            <h2 id="modalNewsTitle" style="color: var(--white); margin: 10px 0 20px 0;"></h2>
+            <img id="modalNewsImg" src="" alt="Gambar Berita" style="width: 100%; height: 260px; object-fit: cover; border-radius: 12px; margin-bottom: 20px;">
+            <div id="modalNewsContent"></div>
+        </div>
+    </div>
+
+    <!-- JQUERY & CUSTOM JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
 </html>
